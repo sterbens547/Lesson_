@@ -34,7 +34,6 @@ public class Product {
         System.out.println("Object created");
         setValues(name,date,manufacture,country,price,reserved);
         info();
-
     }
 
 

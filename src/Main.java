@@ -11,8 +11,9 @@ public class Main {
         array[3] = new Product("iPhone", "20.05.2023", "Apple", "США", 999, false);
         array[4] = new Product("Bosch", "05.12.2022", "Bosch", "Германия", 1500, true);
 
-        Attraction attraction_1 = new Attraction(" Колесо обозрения ","14:00",12.12);
-        Attraction attraction_2 = new Attraction(" Качели ","14:00",12.12);
+        Park attraction_1 = new Park(" Колесо обозрения ","14:00",12.12);
+        Park attraction_2 = new Park(" Качели ","14:00",12.12);
+
 
 
     }
