@@ -19,6 +19,6 @@ public class Bowl {
     // Добавление еды
     public void addingFood(int addFood) {
         this.food += addFood;
-        System.out.println("Добавлено " + addFood + "еды.В миске " + food);
+        System.out.println("Добавлено " + addFood + " еды. В миске " + food);
     }
 }

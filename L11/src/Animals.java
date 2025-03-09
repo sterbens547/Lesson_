@@ -20,7 +20,7 @@ public class Animals {
 
     public void run(int runDist) {
         if (runDist <= 500) {
-            System.out.println(name + " пробежала: " + runDist + " м ");
+            System.out.println(name + " пробежал: " + runDist + " м ");
         } else {
             System.out.println(name + " не может пробежать: " + runDist + " м ");
         }
