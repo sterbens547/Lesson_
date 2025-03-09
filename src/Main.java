@@ -11,8 +11,10 @@ public class Main {
         array[3] = new Product("iPhone", "20.05.2023", "Apple", "США", 999, false);
         array[4] = new Product("Bosch", "05.12.2022", "Bosch", "Германия", 1500, true);
 
-        Park attraction_1 = new Park(" Колесо обозрения ","14:00",12.12);
-        Park attraction_2 = new Park(" Качели ","14:00",12.12);
+       Park park = new Park();
+       park.addAttraction("Колесо обозрения","12:12",43.32);
+       park.addAttraction("Качели","13:12",1234);
+
 
 
 
