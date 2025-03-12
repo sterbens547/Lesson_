@@ -37,7 +37,7 @@ public class Triangle implements Matc {
 
     @Override
     public void info() {
-        System.out.println("Perimet; " + perimetr() + ", area: " + area() + ", fill collor " + fcolor + ", border color " + bcolor);
+        System.out.println("Perimet; " + perimetr() + ", area: " + area() + ", fill color " + fcolor + ", border color " + bcolor);
 
     }
 }

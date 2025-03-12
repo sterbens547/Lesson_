@@ -31,7 +31,7 @@ public class Circle implements Matc{
 
     @Override
     public void info() {
-        System.out.println("Perimtr: " + perimetr() + ", Area: " + area() + ", Fill " + fcolor + ", Border " + bicolor);
+        System.out.println("Perimtr: " + perimetr() + ", Area: " + area() + ", Fill color " + fcolor + ", Border color " + bicolor);
 
     }
 }
