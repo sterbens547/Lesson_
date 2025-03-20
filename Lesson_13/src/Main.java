@@ -1,34 +1,44 @@
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Set<Student>
-                students = new HashSet<>();
-        students.add(new Student("Сергей Маманович","Поток 26",1,Map.of("QA",7.1,"AQA",6.1)));
-        students.add(new Student("Кирилл Корякин","Поток 26",1,Map.of("QA",5.1,"AQA",6.0)));
-        students.add(new Student("Виктория Корень","Поток 26",1,Map.of("QA",4.1,"AQA",1.0)));
-        students.add(new Student("Антон Дрозд","Поток 26",1,Map.of("QA",1.0,"AQA",2.0)));
-        students.add(new Student("Миша Антонинко","Поток 26",1,Map.of("QA",4.1,"AQA",6.0)));
-
-        System.out.println("Все студенты: ");
-        infoStudent(students,1);
 
 
+        Set<Student> students = new HashSet<>();
+        students.add(new Student("Иван Иванов", "Группа 101", 1, Arrays.asList(4, 5, 3)));
+        students.add(new Student("Петр Петров", "Группа 102", 2, Arrays.asList(2, 3, 2)));
+        students.add(new Student("Сидор Сидоров", "Группа 103", 1, Arrays.asList(5, 5, 5)));
+        students.add(new Student("Мария Иванова", "Группа 101", 2, Arrays.asList(3, 4, 3)));
 
-        // перевод на курс выше
-        nextCourse(students);
+        // Удаляем с балом меньше 3
+        delete(students);
 
-        //удаление
-        removal(students);
+        // Переводим студентов
+        translation(students);
 
+        // Выводим студентов
+        printStudents(students, 3);
     }
-    //сдуленты на курсе
-    public static void infoStudent(Set<Student> students,int course) {
-        System.out.println("Студенты " + course + " : ");
+
+    // удаления студентов
+    public static void delete(Set<Student> students) {
+        students.removeIf(student -> student.getAverage() < 3.0);
+    }
+
+    // перевод студентов с
+    public static void translation(Set<Student> students) {
+        for (Student student : students) {
+            if (student.getAverage() >= 3.0) {
+                student.setCourse(student.getCourse() + 1);
+            }
+        }
+    }
+
+    //  вывод студентов определенного курса
+    public static void printStudents(Set<Student> students, int course) {
+        System.out.println("Студенты на курсе " + course + ":");
         for (Student student : students) {
             if (student.getCourse() == course) {
                 System.out.println(student.getName());
@@ -36,16 +46,7 @@ public class Main {
         }
     }
 
-    //перевод на курс выше
-    public static void nextCourse( Set<Student> students) {
-        for (Student student : students) {
-            if (student.averageScore() >= 3.0) {
-                System.out.println(student.getCourse() + 1);
-        }
-    }
-    }
-    // удаление
-    public static void removal(Set<Student> students) {
-    students.removeIf(student -> student.averageScore() <3);
-    }
+
+
+
 }
