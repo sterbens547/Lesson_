@@ -7,7 +7,7 @@ public class Main {
 
         boocNumber.add("Иванов", "123-456-789");
         boocNumber.add("Петров", "987-654-321");
-        boocNumber.add("Иванов", "555-555-555"); // У Иванова два номера
+        boocNumber.add("Иванов", "555-555-555");
         boocNumber.add("Сидоров", "111-222-333");
 
         boocNumber.printAll();
