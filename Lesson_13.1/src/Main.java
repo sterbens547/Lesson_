@@ -12,8 +12,8 @@ public class Main {
 
         boocNumber.printAll();
 
-        System.out.println("\nТелефоны Иванова: " + boocNumber.get("Иванов"));
-        System.out.println("Телефоны Петрова: " + boocNumber.get("Петров"));
+        System.out.println("\nТелефон Иванова: " + boocNumber.get("Иванов"));
+        System.out.println("Телефон Петрова: " + boocNumber.get("Петров"));
         System.out.println("Телефон отсутствует: " + boocNumber.get("нет"));
     }
 
