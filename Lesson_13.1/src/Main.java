@@ -3,19 +3,19 @@
 public class Main {
     public static void main(String[] args) {
 
-        Contacts contacts = new Contacts();
-        //добавление
-        contacts.record("Чижов","12344321");
-        contacts.record("Пупкин","15465");
-        contacts.record("Штык","1234544");
-        contacts.record("Горный","123494511");
-        contacts.record("Власенко","12374158");
-        contacts.record("Чижик","144455");
-        contacts.record("Пеньков","432156685");
-        contacts.record("Шариков","123421");
+        Contacts boocNumber = new Contacts();
 
-        //поиск
-        System.out.println("Номера по Чижов: " + contacts.get("Чижов"));
+        boocNumber.add("Иванов", "123-456-789");
+        boocNumber.add("Петров", "987-654-321");
+        boocNumber.add("Иванов", "555-555-555"); // У Иванова два номера
+        boocNumber.add("Сидоров", "111-222-333");
+
+        boocNumber.printAll();
+
+        System.out.println("\nТелефоны Иванова: " + boocNumber.get("Иванов"));
+        System.out.println("Телефоны Петрова: " + boocNumber.get("Петров"));
+        System.out.println("Телефоны Неизвестного: " + boocNumber.get("Неизвестный")); // Фамилии нет в справочнике
+    }
 
 
     }

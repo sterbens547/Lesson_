@@ -1,28 +1,33 @@
 import java.util.*;
 
-public class Contacts {
-
+class Contacts {
 
     private Map<String, List<String>> contacts;
 
     public Contacts() {
-        contacts = new HashMap<>();
+        phoneBook = new HashMap<>();
     }
 
-    //медот добавления
-    public void record(String name, String number) {
-        if (!contacts.containsKey(name)) {
-            contacts.put(name, new ArrayList<>());
-            contacts.get(name).add(number);
+    // добавления записи
+    public void add(String name, String number) {
+        // Если фамилия уже есть в справочнике, добавляем номер в список
+        phoneBook.computeIfAbsent(name, k -> new ArrayList<>()).add(number);
+    }
+
+    // поиска номеров по фамилии
+    public List<String> get(String name) {
+        // Возвращаем список номеров для указанной фамилии
+        // Если фамилии нет, возвращаем пустой список
+        return  phoneBook.getOrDefault(name, Collections.emptyList());
+    }
+
+    //  вывод всех записей
+    public void printAll() {
+        for (Map.Entry<String, List<String>> entry :  phoneBook.entrySet()) {
+            System.out.println("Фамилия: " + entry.getKey() + ", Телефоны: " + entry.getValue());
         }
     }
-
-    //поиск
-    public List<String> get(String name) {
-        return
-                contacts.containsKey(name) ?
-                        contacts.get(name) : Collections.emptyList();
-    }
+}
 
 
 
